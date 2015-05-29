@@ -19,13 +19,14 @@
       <processor name="AIDA"/>
       <processor name="HitLocalToGlobal"/>
       <processor name="DafFitter"/>
-      <processor name="MyEUTelUtilityPrintEventNumber"/>
+     <processor name="HitGlobalToLocal"/>
+     <processor name="MyEUTelUtilityPrintEventNumber"/>        
      <processor name="SaveAsRoot"/>
       <processor name="Save"/>
    </execute>
 
    <global>
-      <parameter name="LCIOInputFiles"> @LcioPath@/@FilePrefix@-hitmaker.slcio </parameter>
+      <parameter name="LCIOInputFiles"> @LcioPath@/@FilePrefix@-missingcoordinate.slcio </parameter>
       <parameter name="GearXMLFile" value="@GearFilePath@/@GearFile@"/>
       <parameter name="MaxRecordNumber" value="@MaxRecordNumber@"/>
       <parameter name="SkipNEvents" value="@SkipNEvents@"/>
@@ -102,7 +103,7 @@
   <!--Scale thickness of DUT planes-->
   <!--parameter name="ScaleScattering" type="float" value="1"/-->
   <!--Sigma of telescope resolution in the global X plane,-->
-  <parameter name="TelResolutionX" type="float" value="@TelResolution@"/>
+  <parameter name="TelR esolutionX" type="float" value="@TelResolution@"/>
   <!--Sigma of telescope resolution in the global Y plane,-->
   <parameter name="TelResolutionY" type="float" value="@TelResolution@"/>
   <!--List of sensor IDs for the telescope planes. These planes are used for the track finder, and track fitter.-->
