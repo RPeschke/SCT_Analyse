@@ -49,7 +49,7 @@
  <processor name="HitLocalToGlobal" type="EUTelProcessorCoordinateTransformHits">
  <!--EUTelLocaltoGlobalHitMaker is responsible to change local coordinates to global. This is done using the EUTelGeometryClass-->
   <!--Local input hit collection name-->
-  <parameter name="hitCollectionNameInput" type="string" lcioInType="TrackerHit"> local_hit </parameter>
+  <parameter name="hitCollectionNameInput" type="string" lcioInType="TrackerHit"> local_hit</parameter>
   <!--Global output hit collection name-->
   <parameter name="hitCollectionNameOutput" type="string" lcioOutType="TrackerHit"> hit </parameter>
   <!--Set to true to undo the alignment instead-->
@@ -73,9 +73,9 @@
   <!--List of sensor IDs for the DUT planes. Used to make the decision on whether ro accept the track or not. These planes are not used in track finder, and not in the track fitter unless option 'useDutsInFit' is set.-->
   <parameter name="DutPlanes" type="IntVec" value="@DUTPlanes@"/>
   <!--Sigma of telescope resolution in the global X plane,-->
-  <parameter name="DutResolutionX" type="float" value="100"/>
+  <parameter name="DutResolutionX" type="float" value="1000000"/>
   <!--Sigma of telescope resolution in the global Y plane,-->
-  <parameter name="DutResolutionY" type="float" value="100"/>
+  <parameter name="DutResolutionY" type="float" value="10000000"/>
   <!--Beam energy [GeV], used to calculate amount of scatter-->
   <parameter name="Ebeam" type="float" value="@BeamEnergy@"/>
   <!--Track finding: The maximum allowed distance between to hits in the xy plane for inclusion in track candidate-->
